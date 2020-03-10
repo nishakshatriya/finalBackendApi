@@ -1,0 +1,32 @@
+{
+  "nullInput": {
+    "unit": null,
+    "unitTpe1": null,
+    "unitTpe2": null,
+    "input": null
+  },
+  "emptyUnits": {
+    "unit": "",
+    "unitTpe1": "",
+    "unitTpe2": "",
+    "input": 3
+  },
+  "wrongBaseType": {
+    "unit": "MASS",
+    "unitTpe1": "INCH",
+    "unitTpe2": "YARD",
+    "input": 36
+  },
+  "wrongUnitTypes": {
+    "unit": "LENGTH",
+    "unitType1": "ML",
+    "unitType2": "LITER",
+    "input": 1000
+  },
+  "ValidInput": {
+    "unit": "LENGTH",
+    "unitType1": "YARD",
+    "unitType2": "FEET",
+    "input": 1
+  }
+}

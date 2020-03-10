@@ -10,7 +10,8 @@ app.use(cors())
 
 require('./main/source/routes/routes')(app)
 
-app.listen(4000, () => {
+var host = app.listen(4000, () => {
     console.log("server is listening on port 4000");
 
 });
+module.exports=host;

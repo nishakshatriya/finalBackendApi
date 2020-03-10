@@ -60,7 +60,11 @@ module.exports = {
         } catch(err){
             console.log(err);          
             res,status(500).send({message: " internal error"})
-        }
+        }},
 
-    }
+        getBaseType(req,res){
+            
+                var baseType = service.getBaseUnitType(req,res);
+                res.status(200).send({baseType});
+        }
 }
