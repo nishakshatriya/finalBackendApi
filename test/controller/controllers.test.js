@@ -77,4 +77,45 @@ describe('Testing controllers different scenarios',() => {
 
         });
     });
+
+    it('checking baseUnit is returned or not', done =>{
+        chai
+        .request(server)
+        .get('/units/LENGTH')
+        .end((err,res)=>{
+            res.should.have.status(200);
+            done();
+        })
+    })
+
+    it('checking if no key is passed to api ', done =>{
+        chai
+        .request(server)
+        .get('/units/')
+        .end((err, res) => {
+            res.should.have.status(404);
+            done();
+        })
+    })
+
+    it('checking if no api is passed', done => {
+        chai
+        .request(server)
+        .get('/')
+        .end((err, res) => {
+            res.should.have.status(404);
+            done();
+        })
+    })
+
+    it('checking if empty api is passed', done =>{
+        chai
+        .request(server)
+        .get("")
+        .end((err, res) => {
+            res.should.have.status(404);
+            done();
+        })
+    })
+
 })
